@@ -189,7 +189,7 @@ export const SignUpView = () => {
                 </div>
                 {!!error && (
                   <Alert className="bg-destructive/10 border-none">
-                    <OctagonAlertIcon className="h-4 w-4 text-destructive!" />
+                    <OctagonAlertIcon className="h-4 w-4 !text-destructive" />
                     <AlertTitle>{error}</AlertTitle>
                   </Alert>
                 )}
@@ -235,8 +235,8 @@ export const SignUpView = () => {
             </form>
           </Form>
 
-          <div className="relative hidden md:flex flex-col gap-y-4 items-center justify-center bg-green-800">
-            <img src="/logo.svg" alt="Image" className="h-23 w-23" />
+          <div className="bg-radial from-sidebar-accent to-sidebar relative hidden md:flex flex-col gap-y-4 items-center justify-center">
+            <img src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" />
             <p className="text-2xl font-semibold text-white">
               Meet.AI
             </p>
