@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="MeetAI">
+  <rect width="96" height="96" rx="20" fill="#ffffff"/>
+  <path d="M20 24h56v48H20z" fill="#15803d"/>
+  <path d="M29 32h38v32H29z" fill="#ffffff"/>
+  <path d="M38 40h20v6H38zm0 10h20v6H38z" fill="#15803d"/>
+  <circle cx="48" cy="48" r="5" fill="#22c55e"/>
+  <path d="M76 42l12-7v26l-12-7z" fill="#ffffff"/>
+</svg>

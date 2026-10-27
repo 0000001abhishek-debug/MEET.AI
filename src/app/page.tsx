@@ -1,93 +1,21 @@
-// "use client";
-// import { authClient } from "../lib/auth-client";
-// import { useState } from "react";
-// import { Input } from "../components/ui/input";
-// import { Button } from "../components/ui/button";
 
-// export default function Home() {
-
-//   const { data: session} = authClient.useSession()
-
-
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-
-// const onSubmit = () => {
-//   authClient.signUp.email({
-//     email,
-//     name,
-//     password,
-//   }, {
-//     onError: (error) => {
-//       console.log("Error signing up:", error);
-//     },
-//     onSuccess: (data) => {
-//       console.log("Sign up successful:", data);
-//     },
-//   });
-// }
-
-// if (session) {
-//     return (
-//       <div className="flex flex-col p-4 gap-y-4">
-//         <p>Logged in as {session.user.email}</p>
-//         <Button onClick={() => authClient.signOut()}>Sign out</Button> 
-//       </div>
-
-//     <div className="p-4 flex flex-col p-4 gap-y-4"> 
-//     <div>
-//       <Input 
-//       placeholder="Name" 
-//       value={name} 
-//       onChange={(e) => setName(e.target.value)} />
-
-//       <Input 
-//       placeholder="Email" 
-//       value={email} 
-//       onChange={(e) => setEmail(e.target.value)} />
-      
-//       <Input 
-//       placeholder="Password" 
-//       type="password" 
-//       value={password} 
-//       onChange={(e) => setPassword(e.target.value)} />
-//       <Button onClick={onSubmit}>Create user</Button>
-//     </div>
-//     </div>
-
-//     <div className="p-4 flex flex-col p-4 gap-y-4"> 
-//     <div>
-//       <Input 
-//       placeholder="Name" 
-//       value={name} 
-//       onChange={(e) => setName(e.target.value)} />
-
-//       <Input 
-//       placeholder="Email" 
-//       value={email} 
-//       onChange={(e) => setEmail(e.target.value)} />
-      
-//       <Input 
-//       placeholder="Password" 
-//       type="password" 
-//       value={password} 
-//       onChange={(e) => setPassword(e.target.value)} />
-//       <Button onClick={onSubmit}>Login</Button>
-//       </div>
-//       </div>
-//   );
-// };
    
 
 "use client";
 
+import { redirect } from "next/navigation";
+
+export default function Home() {
+  redirect("/sign-in");
+}
+
+/* Legacy auth UI below:
 import { useState } from "react";
 import { authClient } from "../lib/auth-client";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 
-export default function Home() {
+export default function HomeLegacy() {
   const { data: session, isPending } = authClient.useSession();
 
   const [name, setName] = useState("");
@@ -159,8 +87,8 @@ export default function Home() {
       </div>
     );
   }
-
-  return (
+*/
+/* Legacy JSX:
     <div className="flex max-w-sm flex-col gap-y-4 p-4">
       <h1 className="text-2xl font-bold">
         {isLogin ? "Login" : "Create Account"}
@@ -214,3 +142,4 @@ export default function Home() {
     </div>
   );
 }
+*/
